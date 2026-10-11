@@ -57,6 +57,44 @@ an assertion fails. It opens no accepted or live store and needs no network, mod
 inference service. Its README explains the frozen-input provenance, the exact
 assertions and the disposable negative controls.
 
+## Native supersession enforcement protocol
+
+The [enforcement protocol](native-supersession-enforcement/README.md) and its
+[native archive](results/2026-10-11-native-supersession-enforcement) pin actual
+observations against [Mousa PR61](https://github.com/graydeon/mousa/pull/61), not main.
+Use its exact public head/tree and the executable/build receipt in `product-pin.json`.
+The standalone stdlib runner and independently verified fixtures are committed.
+Keep new output paths outside clean product and companion checkouts.
+
+```sh
+python3 native-supersession-enforcement/run.py capture \
+  --source "$PRODUCT" --binary "$BINARY" \
+  --pin results/2026-10-11-native-supersession-enforcement/product-pin.json \
+  --expectations native-supersession-enforcement/expectations.json \
+  --output /tmp/enforcement-new
+python3 native-supersession-enforcement/run.py verify /tmp/enforcement-new
+```
+
+The original committed-tree capture and a fresh independent-store reproduction
+both passed; the archive records their actual controller exits, complete native
+receipts and negative controls. Repeat from the clean published companion tree
+after publication; collection and publication execution pins are distinct.
+For offline replay, extract `capture.tar.gz` into a new directory and pass its
+`capture` directory to `verify`. The shared `tools/verify_results.py` checks outer
+archive hashes, not native conclusions; `archive-members.json` identifies every
+regular compressed member.
+
+Expected packet and stable selection values were frozen only after a verified
+actual pilot. Fresh request/decision/trail identities and evaluation timestamps are
+retained individually, not reused as cross-run goldens. Every read/rejection has
+all-table logical SQLite fingerprints including committed WAL-visible state;
+query and trail audit writes are separated from immutable administration/index state.
+
+Startup corruption refusal is not transaction rollback evidence. The protocol
+does not claim native synchronized snapshot ordering, per-candidate lifecycle
+injection, semantic correctness, authenticated authorship or performance.
+Historical result bytes and the shared archive verifier remain unchanged.
+
 ## Product correctness gate
 
 This remains entirely inside Mousa and requires no companion checkout, Node, QMD, downloaded datasets or inference services:

@@ -1,0 +1,75 @@
+{
+  "public_head": "bbf73a91788aac3aeb29ac0e6c74153d32363f14",
+  "public_tree": "5cbdeaa61f7835b4e267a1a16664e40572a52e7b",
+  "executable_sha256": "cee6b28c8b15e1ee4680e8ee83c7fb8859a4faec4d735c3201433eb8baf16a97",
+  "toolchain": "go version go1.27.1 linux/amd64",
+  "toolchain_receipt": {
+    "argv": [
+      "go",
+      "version"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 32,
+      "sha256": "f554cfdb85411c2bb1d503df3f53dfbad1f753eb8271938833166a5d26a7547c",
+      "base64": "Z28gdmVyc2lvbiBnbzEuMjcuMSBsaW51eC9hbWQ2NAo=",
+      "text": "go version go1.27.1 linux/amd64\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    }
+  },
+  "build_command": [
+    "go",
+    "build",
+    "-trimpath",
+    "-buildvcs=false",
+    "-o",
+    "<binary>",
+    "./cmd/mousa"
+  ],
+  "build_environment": {
+    "CGO_ENABLED": "0",
+    "GOWORK": "off"
+  },
+  "build_receipt": {
+    "argv": [
+      "go",
+      "build",
+      "-trimpath",
+      "-buildvcs=false",
+      "-o",
+      "<binary>",
+      "./cmd/mousa"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<product>"
+  }
+}
