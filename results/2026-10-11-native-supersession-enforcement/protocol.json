@@ -1,0 +1,64 @@
+{
+  "schema": "mousa.native_supersession_enforcement.v1",
+  "status": "Frozen synthetic protocol; native observations are recorded separately",
+  "repository": "https://github.com/graydeon/mousa",
+  "source_external_id": "fixture/enforcement",
+  "source_id": "79dd88883a786e853174f709e00abaff19c2304c302fbcfd3859d40bfb0c5bca",
+  "predecessor": "predecessor",
+  "successor": "successor",
+  "duplicate": "duplicate",
+  "pins": {
+    "duplicate": {
+      "observation_id": "bfa6703445abb592828324314bfb3561963a8240a9144c91f58ca31c0bb49559",
+      "artifact_id": "724556457ec8a6a62867325ce77424d7234f476cc8df1fb7e9e1146dd760a114",
+      "representation_id": "2ffba5e4418ff7e143cf5d2b3325b05d4ba8cffe0253731d20881f4bc1ecea79",
+      "segment_id": "4432ea766adbf4e6b9a009b30f4247eb384cfa5591397923c81d5d5d93ef61ca"
+    },
+    "successor": {
+      "observation_id": "212229333532c74ea691858961bd96b95580e42046c485fc8cc5d5481ff8b5d1",
+      "artifact_id": "c541ba8c8fb545cc091a16409465667a9b833cbc2f29e0b05326dd9a192726a8",
+      "representation_id": "042f3e327b8d92ab59e92665880c47d4945bda49a43291c4f14bf8c39e75219c",
+      "segment_id": "ff5dfc1b7d3c9a1a4d942024c3921a1de795147346ba1a9ca185489872d29b2e"
+    },
+    "predecessor": {
+      "observation_id": "2ec555382f0bbdc30fde039cd34998f05b0de8430f8e42d8ea38b262e9e2dc78",
+      "artifact_id": "ceb92fa55a4b33d5462f797be404dcad6e28776436a5bcfa8df235ccf296490f",
+      "representation_id": "329f3f62822d1f437ea09af5e74da149f366faeeaf0703e43a4a00ed52c7c40b",
+      "segment_id": "42e48ec62692048f527c2fe398d8a603fd08c3e3effaf6ee29ada1fae7503107"
+    }
+  },
+  "inputs": {
+    "items.jsonl": "790f0058fc66fe8ff686909dd0a44fd535507db615734a7cbed1a9fa2b7e73bb",
+    "declaration.json": "eec390566e1f3c2fd69408fc608020e9370e23b78b3b5384c2f1577edeac3d4d",
+    "activation-initial.json": "1f5190503033598b32731c3ee4665c30652e2ebd4701c1a9d531bb2340c7fe7e",
+    "activation-deactivation.json": "37a212194079c88824738e77277e32bc3661b2a50c054977608cd73f728a6578",
+    "activation-reactivation.json": "d8107c98eed60c46601ab794584a5be17d1d65cfbaa6c63407c352c7a9012d67",
+    "delete-duplicate.jsonl": "1e960d82df7db00030f53ff3120acd1f047fda7d98e337d9ac2a7196f991943c",
+    "delete-successor.jsonl": "da1d56c5ef80ccce94869ab5b8721fe1034d68a3333c2bf1bdf209f92667e0b6",
+    "revise-successor.jsonl": "b15424e3ea5384fc054797bceb9cd8729f7c485f82afb6051cd8355a396dc225",
+    "revise-predecessor.jsonl": "977d1d796bd73a5bebd0bcc6e9e0b13ca477f48f73902dafa465c290f3c64251",
+    "over-limit.jsonl": "4568408843d37cba219db20dcb5fe0d8355c02a3ad7d4d060c9297f4a7f4e289",
+    "declaration-limit.json": "a83353817ec94538b3804e42b0fdf2891c544690606da9315744723a3c193d84",
+    "activation-limit.json": "65a313da67a3fca21eac2dc92f3855c036aa50fa4ce8f7eb1ca0ad7ea2bd48a4"
+  },
+  "fixture_preparation": {
+    "method": "Independent Python stdlib tuple derivation and compact JSON encoding; no product imports. Published native sync plus read-only SQLite canonical observations separately verified the revision suffix and observation IDs before capture.",
+    "contract_reference_head": "bbf73a91788aac3aeb29ac0e6c74153d32363f14",
+    "contract_reference_tree": "5cbdeaa61f7835b4e267a1a16664e40572a52e7b",
+    "revision_suffix": "Hex-encoded ASCII lowercase SHA-256 hexdigest, preserving existing native Go fmt %x/Stringer formatting (128 characters).",
+    "verification_receipt_sha256": "009b75a86efcecf27f6b26afaf81eb30a97e3699b8ee38de144dd0f4f44a8b2b"
+  },
+  "policies": [
+    "original",
+    "exact-v1"
+  ],
+  "candidate_limit": 100,
+  "limitations": [
+    "Native subprocess startup corruption rejection is not proof of an already-open transaction rollback.",
+    "No latency, semantic truth, author authentication, host capacity, MCP or association enforcement claim.",
+    "Fresh request/decision/trail IDs and timestamps cannot be frozen across independent native invocations. Freeze packet IDs and immutable selection projections only.",
+    "Per-candidate lifecycle mixed with suppression is not independently injectable through JSONL: deleted items have no lexical rows. Source withdrawal precedence is exercised instead.",
+    "No concurrent transaction ordering proof: native process startup is the available independent seam."
+  ],
+  "limit_successor_segment_id": "20451fb737b388f4c5b571143e68083ddb8f5055651dbf02488f62c9738e8179"
+}

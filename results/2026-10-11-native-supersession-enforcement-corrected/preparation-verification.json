@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "observation-count": true,
+    "protocol-pins": true,
+    "stored-ids": true,
+    "stored-source": true,
+    "stored-suffix": true
+  },
+  "executable_sha256": "19f122f9ca29e3cb0de29bc87a3f7ebca89668b0cd8a456328eaa60858618cf4",
+  "independent_pins": {
+    "duplicate": {
+      "artifact_id": "724556457ec8a6a62867325ce77424d7234f476cc8df1fb7e9e1146dd760a114",
+      "observation_id": "bfa6703445abb592828324314bfb3561963a8240a9144c91f58ca31c0bb49559",
+      "representation_id": "2ffba5e4418ff7e143cf5d2b3325b05d4ba8cffe0253731d20881f4bc1ecea79",
+      "segment_id": "4432ea766adbf4e6b9a009b30f4247eb384cfa5591397923c81d5d5d93ef61ca"
+    },
+    "predecessor": {
+      "artifact_id": "ceb92fa55a4b33d5462f797be404dcad6e28776436a5bcfa8df235ccf296490f",
+      "observation_id": "2ec555382f0bbdc30fde039cd34998f05b0de8430f8e42d8ea38b262e9e2dc78",
+      "representation_id": "329f3f62822d1f437ea09af5e74da149f366faeeaf0703e43a4a00ed52c7c40b",
+      "segment_id": "42e48ec62692048f527c2fe398d8a603fd08c3e3effaf6ee29ada1fae7503107"
+    },
+    "successor": {
+      "artifact_id": "c541ba8c8fb545cc091a16409465667a9b833cbc2f29e0b05326dd9a192726a8",
+      "observation_id": "212229333532c74ea691858961bd96b95580e42046c485fc8cc5d5481ff8b5d1",
+      "representation_id": "042f3e327b8d92ab59e92665880c47d4945bda49a43291c4f14bf8c39e75219c",
+      "segment_id": "ff5dfc1b7d3c9a1a4d942024c3921a1de795147346ba1a9ca185489872d29b2e"
+    }
+  },
+  "native_invocation": {
+    "argv": [
+      "<binary>",
+      "-store",
+      "<preparation-store>",
+      "sync",
+      "--source",
+      "fixture/enforcement"
+    ],
+    "exit": 0,
+    "stderr": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdin": {
+      "base64": "eyJpZCI6ImR1cGxpY2F0ZSIsInRleHQiOiJvbGR0ZXJtIHByZWRlY2Vzc29yIGV2aWRlbmNlIn0KeyJpZCI6InN1Y2Nlc3NvciIsInRleHQiOiJuZXd0ZXJtIHN1Y2Nlc3NvciBldmlkZW5jZSJ9CnsiaWQiOiJwcmVkZWNlc3NvciIsInRleHQiOiJvbGR0ZXJtIHByZWRlY2Vzc29yIGV2aWRlbmNlIn0K",
+      "bytes": 171,
+      "sha256": "790f0058fc66fe8ff686909dd0a44fd535507db615734a7cbed1a9fa2b7e73bb",
+      "text": "{\"id\":\"duplicate\",\"text\":\"oldterm predecessor evidence\"}\n{\"id\":\"successor\",\"text\":\"newterm successor evidence\"}\n{\"id\":\"predecessor\",\"text\":\"oldterm predecessor evidence\"}\n"
+    },
+    "stdout": {
+      "base64": "ewogICJzb3VyY2UiOiAiZml4dHVyZS9lbmZvcmNlbWVudCIsCiAgImlucHV0IjogImpzb25sIiwKICAic2VnbWVudF9wb2xpY3kiOiAiZml4ZWQtdjEiLAogICJhZGRlZCI6IFsKICAgICJkdXBsaWNhdGUiLAogICAgInN1Y2Nlc3NvciIsCiAgICAicHJlZGVjZXNzb3IiCiAgXSwKICAidG90YWxfaXRlbXMiOiAzLAogICJzdG9yZV9ieXRlcyI6IDQwOTYsCiAgImVsYXBzZWRfc2Vjb25kcyI6IDAuMDYxODQyMDM2Cn0K",
+      "bytes": 237,
+      "sha256": "70ce6f1c82425bc1962d12f066fd26696c87183202e45cceb3c567e249be9734",
+      "text": "{\n  \"source\": \"fixture/enforcement\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"duplicate\",\n    \"successor\",\n    \"predecessor\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 0.061842036\n}\n"
+    }
+  },
+  "observations": [
+    {
+      "external_observation_id": "item/successor@66373264613636363862386634633939396439386235643134336531616464633330643536643461653332653465626230646465313264616337316633316330",
+      "id": "212229333532c74ea691858961bd96b95580e42046c485fc8cc5d5481ff8b5d1",
+      "schema": "mousa.observation.v1",
+      "source_id": "79dd88883a786e853174f709e00abaff19c2304c302fbcfd3859d40bfb0c5bca"
+    },
+    {
+      "external_observation_id": "item/predecessor@33326263616536623531306366313733333438303035643563343330316162396134396166393161333966313163623031303665653230396536643765306631",
+      "id": "2ec555382f0bbdc30fde039cd34998f05b0de8430f8e42d8ea38b262e9e2dc78",
+      "schema": "mousa.observation.v1",
+      "source_id": "79dd88883a786e853174f709e00abaff19c2304c302fbcfd3859d40bfb0c5bca"
+    },
+    {
+      "external_observation_id": "item/duplicate@33326263616536623531306366313733333438303035643563343330316162396134396166393161333966313163623031303665653230396536643765306631",
+      "id": "bfa6703445abb592828324314bfb3561963a8240a9144c91f58ca31c0bb49559",
+      "schema": "mousa.observation.v1",
+      "source_id": "79dd88883a786e853174f709e00abaff19c2304c302fbcfd3859d40bfb0c5bca"
+    }
+  ],
+  "pass": true,
+  "preparation_method": "Independent stdlib tuple construction; native revision suffix preserves hex-encoding of the ASCII SHA-256 hexdigest emitted by existing Go fmt %x/Stringer formatting. No product internals imported. SQLite canonical observations separately verify preparation, not native acceptance assertions.",
+  "public_product_head": "e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4",
+  "public_product_tree": "be4e7d8c5a9bfa4ebb8c650660a75f0b8ac41c4b"
+}

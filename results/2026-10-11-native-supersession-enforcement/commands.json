@@ -1,0 +1,669 @@
+[
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "pilot",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--output",
+      "<captures>/pilot"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 1,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "pilot",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--output",
+      "<captures>/pilot-verified-identities"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/pilot-verified-identities"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "freeze",
+      "<captures>/pilot-verified-identities",
+      "--output",
+      "<captures>/frozen-expectations.json"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/capture"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/capture"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/fresh-reproduction"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/fresh-reproduction"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "negative-controls",
+      "<captures>/capture",
+      "--output",
+      "<captures>/negative-controls"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "forbidden-write",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--output",
+      "<captures>/forbidden-write"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 1,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/forbidden-write"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 2,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 13,
+      "sha256": "e006b82d5d4b6d67ffea47e58495c55729ebafdb8c32dcff0f768c8e8e21bed6",
+      "base64": "J2NhbmRpZGF0ZXMnCg==",
+      "text": "'candidates'\n"
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "forbidden-write",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--output",
+      "<captures>/forbidden-write-isolated"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 1,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/forbidden-write-isolated"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 2,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 54,
+      "sha256": "05dc349039fe11e43059e0d26e335c09f97c4b5325e8d7eb9fa8c0257c81a71d",
+      "base64": "ZmFsc2UgYXNzZXJ0aW9uOiBkZWNsYXJhdGlvbi1nZXQ6dW5jaGFuZ2VkLWFsbC10YWJsZXMK",
+      "text": "false assertion: declaration-get:unchanged-all-tables\n"
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "pilot",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--output",
+      "<captures>/pilot-final-runner"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/pilot-final-runner"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "freeze",
+      "<captures>/pilot-final-runner",
+      "--output",
+      "<captures>/final-frozen-expectations.json"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/capture-final"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/capture-final"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "<captures>/product-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/fresh-reproduction-final"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/fresh-reproduction-final"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  },
+  {
+    "argv": [
+      "python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "negative-controls",
+      "<captures>/capture-final",
+      "--output",
+      "<captures>/negative-controls-final"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>"
+  }
+]

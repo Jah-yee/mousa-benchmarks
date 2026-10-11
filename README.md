@@ -6,23 +6,37 @@ These are development measurements, including failed experiments and limitations
 
 ## Current evidence boundary
 
-The latest supersession archive records the native CLI lifecycle for revision-pinned
-declarations and activations: declaration put/get/retry, activation put/get/state
-through an initial selection, a replacement, a deactivation and a reactivation,
-historical reads, rejected stale or superseded expectations, read-only store behavior
-and a repeated query baseline that still releases the declared predecessor revision.
-It is contract and behavior evidence for that pinned revision only, not a
-semantic-memory, retrieval-quality, query-enforcement or performance result. Mousa's
-current
-[capability matrix](https://github.com/graydeon/mousa/blob/main/docs/CAPABILITIES.md#supersession-core-boundary)
-distinguishes the available CLI administration commands from the internal APIs and
-from unimplemented query enforcement.
+The [native enforcement archive](results/2026-10-11-native-supersession-enforcement-corrected)
+records independent subprocess acceptance under both packing policies against
+[Mousa PR61](https://github.com/graydeon/mousa/pull/61), corrected public commit
+`e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4`, tree `be4e7d8c5a9bfa4ebb8c650660a75f0b8ac41c4b`.
+It includes exact-pin withholding, unchanged defaults, transitions, stale pins, survivor
+packing, historical reads, fresh-store reproduction, the invalid-expression exit/store
+boundary matrix and negative controls. That tested PR is not claimed merged or available
+on main. It is synthetic behavior evidence, not a performance, semantic-memory,
+retrieval-quality or authentication result. The earlier
+[pre-correction capture](results/2026-10-11-native-supersession-enforcement) against
+PR61's previous head `bbf73a91788aac3aeb29ac0e6c74153d32363f14` is retained unchanged as
+that observation; its 44 frozen selection cases are identical to the corrected pin's.
+
+The prior [administration archive](results/2026-10-07-native-supersession-administration)
+records declaration/activation lifecycle and an unchanged query baseline at its
+own pinned revision. It remains administration-only evidence, not later enforcement.
+The [tested capability matrix](https://github.com/graydeon/mousa/blob/e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4/docs/CAPABILITIES.md#supersession-core-boundary)
+distinguishes those boundaries.
 
 The earlier supersession archive contains pinned product contract checks for
 revision-bound declarations, immutable storage and activation history.
 
+The [native enforcement protocol](native-supersession-enforcement) supplies the
+standalone standard-library runner, independently verified synthetic fixture
+construction and actual observed packet/stable-trail expectations. Each read or
+rejected write has its own complete logical SQLite fingerprint, including WAL-visible
+state; queries' legitimate audit writes are separated from administration/index changes.
+Startup refusal is not already-open transaction rollback or snapshot-ordering proof.
+
 Later product fixes do not change historical result identities or test counts.
-Use each run's recorded source and protocol. The supersession runners force
+Use each run's recorded source and protocol. The historical supersession runners force
 `GOWORK=off` for new reproductions; the older archived observation did not
 record workspace configuration. See that run README's dated correction.
 
@@ -49,6 +63,9 @@ record workspace configuration. See that run README's dated correction.
 - [results/2026-10-02-chronology](results/2026-10-02-chronology): frozen lifecycle acceptance, exact-span accounting, omissions and preserved negative observations; no model-quality or timing claim.
 - [results/2026-10-06-supersession-core](results/2026-10-06-supersession-core): pinned declaration/persistence/activation contract tests and preserved integrity failures; no enforcement or semantic-quality claim.
 - [results/2026-10-07-native-supersession-administration](results/2026-10-07-native-supersession-administration): native CLI capture of the declaration/activation lifecycle, rejections, read-only store behavior and an unchanged query baseline; no suppression, quality or timing claim.
+- [native-supersession-enforcement](native-supersession-enforcement): independent native enforcement runner, frozen inputs and observed packet/trail selections.
+- [results/2026-10-11-native-supersession-enforcement-corrected](results/2026-10-11-native-supersession-enforcement-corrected): paired native acceptance at PR61's corrected public tree, complete bounded captures, the invalid-expression boundary matrix, retained failures and negative controls; no performance claim.
+- [results/2026-10-11-native-supersession-enforcement](results/2026-10-11-native-supersession-enforcement): the earlier pre-correction capture at PR61's previous head, retained unchanged as that observation.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

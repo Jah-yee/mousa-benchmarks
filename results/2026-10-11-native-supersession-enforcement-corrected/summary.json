@@ -1,0 +1,49 @@
+{
+  "schema": "mousa.native_supersession_capture_summary.v1",
+  "product_pr": "https://github.com/graydeon/mousa/pull/61",
+  "product_public_head": "e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4",
+  "product_tree": "be4e7d8c5a9bfa4ebb8c650660a75f0b8ac41c4b",
+  "executable_sha256": "19f122f9ca29e3cb0de29bc87a3f7ebca89668b0cd8a456328eaa60858618cf4",
+  "capture_time_utc": "2026-10-11T08:21:49.498754+00:00",
+  "companion_capture_execution": {
+    "head": "9280b603439f987c3110ce5d5b761e70038477f3",
+    "tree": "49a871db54aa067365fafd97fa2ab8103c4246fa"
+  },
+  "companion_pilot_execution": {
+    "head": "fec132fb0a93ac9b454d5c29bed5ebd2c5e25d39",
+    "tree": "9664ceb07366f75a1861319ded8f80d62e01c912"
+  },
+  "native_invocations_per_capture": 145,
+  "passing_assertions_per_capture": 3037,
+  "failed_assertions_per_capture": 0,
+  "stable_selection_cases": 44,
+  "boundary_cases": 30,
+  "boundary_assertions": 120,
+  "boundary_failed_assertions": 0,
+  "boundary_default_and_explicit_false_exit": 1,
+  "boundary_default_and_explicit_false_store_created": true,
+  "boundary_opted_exit": 2,
+  "boundary_opted_store_created": false,
+  "negative_controls_rejected": 8,
+  "negative_actual_false_condition_rejected": true,
+  "forbidden_control_only_failed_assertion": [
+    "declaration-get:unchanged-all-tables"
+  ],
+  "capture_and_fresh_reproduction_exit": 0,
+  "capture_and_fresh_reproduction_verify_exit": 0,
+  "negative_controls_exit": 0,
+  "forbidden_write_exit": 1,
+  "forbidden_verify_exit": 2,
+  "bounded_archives": 12,
+  "regular_member_entries": 226,
+  "total_uncompressed_member_bytes": 46355905,
+  "largest_member_bytes": 2150582,
+  "superseded_pre_correction_capture": {
+    "product_public_head": "bbf73a91788aac3aeb29ac0e6c74153d32363f14",
+    "product_tree": "5cbdeaa61f7835b4e267a1a16664e40572a52e7b",
+    "companion_public_head": "613b1ef3d21c02949a1c7845efeec05baff2439d",
+    "companion_public_tree": "386823f94abae1f91e36eb5173b31ade64334767",
+    "disposition": "Retained unchanged in results/2026-10-11-native-supersession-enforcement as the pre-correction observation; not replaced, republished or relabeled by this archive."
+  },
+  "published_companion_reproduction": "Pending publication; the clean committed-tree fresh reproduction already passed."
+}

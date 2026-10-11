@@ -1,0 +1,30 @@
+{
+  "schema": "mousa.native_supersession_capture_summary.v1",
+  "product_pr": "https://github.com/graydeon/mousa/pull/61",
+  "product_public_head": "bbf73a91788aac3aeb29ac0e6c74153d32363f14",
+  "product_tree": "5cbdeaa61f7835b4e267a1a16664e40572a52e7b",
+  "executable_sha256": "cee6b28c8b15e1ee4680e8ee83c7fb8859a4faec4d735c3201433eb8baf16a97",
+  "capture_time_utc": "2026-10-11T04:18:35.368392+00:00",
+  "companion_capture_execution": {
+    "head": "189aa54a27f4e7d1d7ab3dee0e6cf2dca1d05f99",
+    "tree": "b354c5c245a13429c6b92941f8270e0bb42b7dc7"
+  },
+  "native_invocations_per_capture": 115,
+  "passing_assertions_per_capture": 2917,
+  "failed_assertions_per_capture": 0,
+  "stable_selection_cases": 44,
+  "negative_controls_rejected": 8,
+  "forbidden_control_only_failed_assertion": [
+    "declaration-get:unchanged-all-tables"
+  ],
+  "capture_and_fresh_reproduction_exit": 0,
+  "capture_and_fresh_reproduction_verify_exit": 0,
+  "negative_controls_exit": 0,
+  "forbidden_write_exit": 1,
+  "forbidden_verify_exit": 2,
+  "bounded_archives": 13,
+  "regular_member_entries": 243,
+  "total_uncompressed_member_bytes": 42959196,
+  "largest_member_bytes": 1889706,
+  "published_companion_reproduction": "Pending publication; committed-tree fresh reproduction already passed."
+}

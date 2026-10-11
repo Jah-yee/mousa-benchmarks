@@ -1,0 +1,413 @@
+[
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "pilot",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "/work/artifacts/mousa-benchmarks/issue62-repin/corrected-pin.json",
+      "--output",
+      "<captures>/pilot"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "pilot"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/pilot"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "verify-pilot"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "freeze",
+      "<captures>/pilot",
+      "--output",
+      "<captures>/expectations.json"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "freeze"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "/work/artifacts/mousa-benchmarks/issue62-repin/corrected-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/capture"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "capture"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/capture"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "verify-capture"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "/work/artifacts/mousa-benchmarks/issue62-repin/corrected-pin.json",
+      "--expectations",
+      "<companion>/native-supersession-enforcement/expectations.json",
+      "--output",
+      "<captures>/fresh-reproduction"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "fresh-reproduction"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/fresh-reproduction"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "verify-fresh-reproduction"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "negative-controls",
+      "<captures>/capture",
+      "--output",
+      "<captures>/negative-controls"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "negative-controls"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "forbidden-write",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "/work/artifacts/mousa-benchmarks/issue62-repin/corrected-pin.json",
+      "--output",
+      "<captures>/forbidden-write"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 1,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "forbidden-write"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/forbidden-write"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 2,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 54,
+      "sha256": "05dc349039fe11e43059e0d26e335c09f97c4b5325e8d7eb9fa8c0257c81a71d",
+      "base64": "ZmFsc2UgYXNzZXJ0aW9uOiBkZWNsYXJhdGlvbi1nZXQ6dW5jaGFuZ2VkLWFsbC10YWJsZXMK",
+      "text": "false assertion: declaration-get:unchanged-all-tables\n"
+    },
+    "cwd": "<companion>",
+    "label": "verify-forbidden-write"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "verify",
+      "<captures>/packaged-replay/capture"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 56,
+      "sha256": "f9c78242469d1bbc5fb93cdf720879953461072613fcadfe42c87633e79f9d6c",
+      "base64": "VmVyaWZpZWQgY29tcGxldGUgbmF0aXZlIGFzc2VydGlvbnMgYW5kIGFyY2hpdmUgbWVtYmVycwo=",
+      "text": "Verified complete native assertions and archive members\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "verify-packaged-replay"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/tools/verify_results.py"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 1400,
+      "sha256": "04e74d133952bb641860d46f6d0e112dea3388fb8dc8cdfadfe1780d51477553",
+      "base64": "VmVyaWZpZWQgOSB1bmNoYW5nZWQgbWlncmF0ZWQgSlNPTiBmaWxlcwpWZXJpZmllZCAxMCBydW4gZmlsZXM6IDIwMjYtMDktMTYtZXhhY3QtcGFja2luZwpWZXJpZmllZCAxMCB1bmNoYW5nZWQgZnJvemVuIGZpeHR1cmVzClZlcmlmaWVkIDEzIHJ1biBmaWxlczogMjAyNi0wOS0xNi1oaXN0b3J5LWRpdmVyc2l0eQpWZXJpZmllZCAxNSBydW4gZmlsZXM6IDIwMjYtMDktMTYtcGFja2luZy1zY2FsYWJpbGl0eQpWZXJpZmllZCAxMCB1bmNoYW5nZWQgZnJvemVuIGZpeHR1cmVzClZlcmlmaWVkIDkgcnVuIGZpbGVzOiAyMDI2LTA5LTE3LWFzc29jaWF0ZWQtYm91bmRzClZlcmlmaWVkIDMwIHJ1biBmaWxlczogMjAyNi0wOS0xNy1hc3NvY2lhdGVkLWNvbnRleHQKVmVyaWZpZWQgOCBydW4gZmlsZXM6IDIwMjYtMDktMTctYmFja3VwLWRlY2lzaW9uClZlcmlmaWVkIDYgcnVuIGZpbGVzOiAyMDI2LTA5LTE3LWNvcnB1cy1ib3VuZGFyaWVzClZlcmlmaWVkIDkgcnVuIGZpbGVzOiAyMDI2LTA5LTE3LWRpYWdub3N0aWMtY29uc3VtZXIKVmVyaWZpZWQgNyBydW4gZmlsZXM6IDIwMjYtMDktMTctaGlzdG9yeS1mcmVlLWRpYWdub3NpcwpWZXJpZmllZCA1IHJ1biBmaWxlczogMjAyNi0wOS0yOS1jb250ZXh0LTUxMgpWZXJpZmllZCAzIHJ1biBmaWxlczogMjAyNi0wOS0yOS1zd2l0Y2gtY2l0YXRpb24tbGF5b3V0ClZlcmlmaWVkIDQgcnVuIGZpbGVzOiAyMDI2LTA5LTI5LXN3aXRjaC1kZWZhdWx0LXJlbW90ZQpWZXJpZmllZCAzIHJ1biBmaWxlczogMjAyNi0wOS0yOS1zd2l0Y2gtcGFyZW50LWZvbGxvd3VwClZlcmlmaWVkIDggcnVuIGZpbGVzOiAyMDI2LTA5LTMwLWFnZW50LW1lbW9yeQpWZXJpZmllZCA1IHJ1biBmaWxlczogMjAyNi0wOS0zMC1sb25nLWhvcml6b24KVmVyaWZpZWQgNCBydW4gZmlsZXM6IDIwMjYtMDktMzAtc3ludGhldGljLWZsZWV0ClZlcmlmaWVkIDkgcnVuIGZpbGVzOiAyMDI2LTEwLTAyLWNocm9ub2xvZ3kKVmVyaWZpZWQgMjU3IGNocm9ub2xvZ3kgYXJjaGl2ZSBtZW1iZXJzOiByZWxlYXNlLnRhci54egpWZXJpZmllZCAyMDkgY2hyb25vbG9neSBhcmNoaXZlIG1lbWJlcnM6IGZhaWxlZC1zbW9rZS50YXIueHoKVmVyaWZpZWQgOSBjaHJvbm9sb2d5IGFyY2hpdmUgbWVtYmVyczogaW5jb21wbGV0ZS1ydW4udGFyLnh6ClZlcmlmaWVkIDExMiBjaHJvbm9sb2d5IGFyY2hpdmUgbWVtYmVyczogc291cmNlLnRhci54egpWZXJpZmllZCA5IHJ1biBmaWxlczogMjAyNi0xMC0wNi1zdXBlcnNlc3Npb24tY29yZQpWZXJpZmllZCAxMyBydW4gZmlsZXM6IDIwMjYtMTAtMDctbmF0aXZlLXN1cGVyc2Vzc2lvbi1hZG1pbmlzdHJhdGlvbgpWZXJpZmllZCAyMSBydW4gZmlsZXM6IDIwMjYtMTAtMTEtbmF0aXZlLXN1cGVyc2Vzc2lvbi1lbmZvcmNlbWVudAo=",
+      "text": "Verified 9 unchanged migrated JSON files\nVerified 10 run files: 2026-09-16-exact-packing\nVerified 10 unchanged frozen fixtures\nVerified 13 run files: 2026-09-16-history-diversity\nVerified 15 run files: 2026-09-16-packing-scalability\nVerified 10 unchanged frozen fixtures\nVerified 9 run files: 2026-09-17-associated-bounds\nVerified 30 run files: 2026-09-17-associated-context\nVerified 8 run files: 2026-09-17-backup-decision\nVerified 6 run files: 2026-09-17-corpus-boundaries\nVerified 9 run files: 2026-09-17-diagnostic-consumer\nVerified 7 run files: 2026-09-17-history-free-diagnosis\nVerified 5 run files: 2026-09-29-context-512\nVerified 3 run files: 2026-09-29-switch-citation-layout\nVerified 4 run files: 2026-09-29-switch-default-remote\nVerified 3 run files: 2026-09-29-switch-parent-followup\nVerified 8 run files: 2026-09-30-agent-memory\nVerified 5 run files: 2026-09-30-long-horizon\nVerified 4 run files: 2026-09-30-synthetic-fleet\nVerified 9 run files: 2026-10-02-chronology\nVerified 257 chronology archive members: release.tar.xz\nVerified 209 chronology archive members: failed-smoke.tar.xz\nVerified 9 chronology archive members: incomplete-run.tar.xz\nVerified 112 chronology archive members: source.tar.xz\nVerified 9 run files: 2026-10-06-supersession-core\nVerified 13 run files: 2026-10-07-native-supersession-administration\nVerified 21 run files: 2026-10-11-native-supersession-enforcement\n"
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "verify-results"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "<companion>/native-supersession-enforcement/run.py",
+      "manifest",
+      "<companion>/results/2026-10-11-native-supersession-enforcement"
+    ],
+    "stdin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "exit": 0,
+    "stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": "",
+      "text": ""
+    },
+    "cwd": "<companion>",
+    "label": "manifest"
+  }
+]
