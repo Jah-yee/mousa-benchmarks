@@ -1,10 +1,13 @@
 # Native supersession enforcement protocol
 
-Status: [native capture and fresh-store reproduction passed](../results/2026-10-11-native-supersession-enforcement)
+Status: [native capture and fresh-store reproduction passed](../results/2026-10-11-native-supersession-enforcement-corrected)
 against [Mousa PR61](https://github.com/graydeon/mousa/pull/61), public head
-`bbf73a91788aac3aeb29ac0e6c74153d32363f14`; that PR is not claimed merged.
-The archive preserves actual build/capture pins, expected observations, negative controls
-and failed preparation. Earlier administration evidence remains unchanged and separate.
+`e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4` (tree `be4e7d8c5a9bfa4ebb8c650660a75f0b8ac41c4b`);
+that PR is not claimed merged.
+The archive preserves actual build/capture pins, expected observations, the fixture
+preparation check and negative controls. The earlier pre-correction capture remains
+in its own dated directory as that observation, and earlier administration evidence
+remains unchanged and separate.
 
 ## Boundary and cases
 
@@ -42,6 +45,15 @@ The scheduled cases cover `original` and `exact-v1` packing:
   boolean values, directory opt-in and association combinations are rejected.
 - Removing the activation projection from a disposable store causes native
   startup refusal with empty stdout and unchanged complete logical database state.
+- An invalid expression keeps one boundary per mode. The opted-in query prepares
+  and size-checks its text before opening the store: exit 2, empty stdout and no
+  store file. A default or `--supersession=false` query, including a directory
+  query, fails after the writable open: exit 1, empty stdout and a created store.
+  Oversized and unpreparable text is observed for both packing policies on fresh
+  stores, so no case inherits another case's store. The scheduled matrix is 24
+  packed-query cases (both packing policies, both query-term policies, both invalid
+  texts and all three spellings) plus 6 directory cases, 120 assertions in all, each
+  on its own fresh store.
 
 Candidate ranks, sizes, selected segment IDs, independently derived revision IDs,
 counts, outcomes and supersession pins are checked. The runner also compares
@@ -103,10 +115,11 @@ ordering; it fails if the native product chooses otherwise. Canonical put output
 is compared byte-for-byte with the independently prepared compact JSON plus LF.
 
 The initial pilot rejected an incorrectly prepared 64-character revision suffix:
-declaration puts failed because those representations did not exist. Its failed
-observations are retained separately. The corrected constructor is checked against
-actual canonical observations at the pinned public product; packet/trail expectations
-are frozen only from a later fully passing pilot.
+declaration puts failed because those representations did not exist. Those failed
+observations belong to the earlier preparation cycle and are not republished with
+this pin. The corrected constructor is checked against actual canonical observations
+at the pinned public product; packet/trail expectations are frozen only from a later
+fully passing pilot.
 
 ## Fingerprints and receipts
 
@@ -121,6 +134,9 @@ that source checkout and executable match it; source matching does not by itself
 prove a reproducible build. Keep the actual build logs separately as needed.
 
 Every claimed read and rejected write has its own before/after fingerprint.
+A rejected boundary invocation additionally records whether the store file existed
+before and after the process, so "no store for a rejected opt-in" and "store created
+by a default failure" are actual observations rather than inferences.
 Fingerprints read every table (including FTS shadow tables and any unexpected
 new table), every column and every row, plus schema and user-version metadata, in
 one read-only SQLite snapshot. Typed values are framed by canonical JSON and
@@ -215,10 +231,10 @@ If adding a README or summary, regenerate only the new run's outer manifest.
 Extract an accepted archive before native `verify`; the outer directory is not a capture.
 
 ```sh
-python3 "$RUNNER" manifest results/2026-10-11-native-supersession-enforcement
+python3 "$RUNNER" manifest results/2026-10-11-native-supersession-enforcement-corrected
 python3 tools/verify_results.py
 mkdir /tmp/enforcement-replay
-tar -xzf results/2026-10-11-native-supersession-enforcement/capture.tar.gz -C /tmp/enforcement-replay
+tar -xzf results/2026-10-11-native-supersession-enforcement-corrected/capture.tar.gz -C /tmp/enforcement-replay
 python3 "$RUNNER" verify /tmp/enforcement-replay/capture
 ```
 

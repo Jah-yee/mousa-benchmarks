@@ -60,8 +60,10 @@ assertions and the disposable negative controls.
 ## Native supersession enforcement protocol
 
 The [enforcement protocol](native-supersession-enforcement/README.md) and its
-[native archive](results/2026-10-11-native-supersession-enforcement) pin actual
-observations against [Mousa PR61](https://github.com/graydeon/mousa/pull/61), not main.
+[native archive](results/2026-10-11-native-supersession-enforcement-corrected) pin actual
+observations against [Mousa PR61](https://github.com/graydeon/mousa/pull/61) public
+head `e0837750bc8972d6fc7ebffc86a8fba05a0ee1f4` (tree
+`be4e7d8c5a9bfa4ebb8c650660a75f0b8ac41c4b`), not main.
 Use its exact public head/tree and the executable/build receipt in `product-pin.json`.
 The standalone stdlib runner and independently verified fixtures are committed.
 Keep new output paths outside clean product and companion checkouts.
@@ -69,7 +71,7 @@ Keep new output paths outside clean product and companion checkouts.
 ```sh
 python3 native-supersession-enforcement/run.py capture \
   --source "$PRODUCT" --binary "$BINARY" \
-  --pin results/2026-10-11-native-supersession-enforcement/product-pin.json \
+  --pin results/2026-10-11-native-supersession-enforcement-corrected/product-pin.json \
   --expectations native-supersession-enforcement/expectations.json \
   --output /tmp/enforcement-new
 python3 native-supersession-enforcement/run.py verify /tmp/enforcement-new

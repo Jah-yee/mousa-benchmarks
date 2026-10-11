@@ -1,5 +1,7 @@
 # Native supersession enforcement acceptance
 
+> Dated note (added after the correction): this directory is the pre-correction capture. The later [corrected-pin capture](../2026-10-11-native-supersession-enforcement-corrected) records the same schedule, the invalid-expression boundary cases and its own negative controls against PR61's corrected public revision. The bytes here are unchanged and are not evidence about that revision. Because the committed runner now includes the boundary cases, `verify` refuses a capture whose copied runner/protocol bytes differ, so replay this archive with the companion commit that archived it (`613b1ef3d21c02949a1c7845efeec05baff2439d`) rather than the current checkout.
+
 Synthetic native CLI acceptance against [Mousa PR61](https://github.com/graydeon/mousa/pull/61), not a main-branch or performance result. Product public commit `bbf73a91788aac3aeb29ac0e6c74153d32363f14`, tree `5cbdeaa61f7835b4e267a1a16664e40572a52e7b`. The matching product implements transaction-local opt-in retrieval; defaults remain unchanged.
 
 The standalone [stdlib runner](../../native-supersession-enforcement/run.py) imports no product internals and drives the explicitly supplied executable in separate processes. Collection at `2026-10-11T04:18:35.368392+00:00` used committed companion execution head `189aa54a27f4e7d1d7ab3dee0e6cf2dca1d05f99`, tree `b354c5c245a13429c6b92941f8270e0bb42b7dc7`. That checkpoint predates adding this archive; it is not relabeled as the later publication commit.

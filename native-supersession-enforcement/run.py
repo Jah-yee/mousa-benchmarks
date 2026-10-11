@@ -354,6 +354,57 @@ class Session:
         self.selections[name] = stable(q, history)
         return q, history
 
+    def boundary_case(self, name, args, mode):
+        """Observe one invalid-expression boundary on a fresh store.
+
+        `mode` selects the opt-in spelling: the opt-in prepares and size-checks its
+        expression before the store is opened, while a default or explicit-false query
+        keeps the established post-open error and writable-open store effect.
+        """
+        self.current_store = 'boundary-' + name
+        store = self.work / (self.current_store + '.sqlite') if self.replay is None else None
+        if store is not None and store.exists():
+            raise ValueError('boundary store was not fresh: ' + name)
+        self.command(name, args, expected_exit=2 if mode == 'opted' else 1, mode='invalid')
+        record = self.commands[-1]
+        self.expect(name + ':fresh-store', None, record['fingerprint_before'])
+        self.expect(name + ':stdout-empty', '', record['stdout']['text'])
+        self.expect(name + ':store-created', mode != 'opted', record['fingerprint_after'] is not None)
+        return record
+
+    def boundary(self):
+        """Invalid-expression boundary for both spellings and every frozen policy pair.
+
+        Directory queries share the parser, so their default and explicit-false
+        spellings must keep the same post-open error and store creation.
+        """
+        if self.replay is None:
+            docs = self.work / 'boundary-docs'
+            docs.mkdir()
+            (docs / 'note.txt').write_text('harbor inspection evidence\n')
+        oversized = 'a' * (4096 + 1)
+        for packing in self.p['policies']:
+            for terms in ('original', 'dedup'):
+                for label, text in (('oversized', oversized), ('unpreparable', '!!!')):
+                    for mode in ('default', 'explicit-false', 'opted'):
+                        args = ['query', '--source', self.p['source_external_id'],
+                                '--packing-policy', packing, '--policy', terms]
+                        if mode == 'opted':
+                            args.append('--supersession')
+                        elif mode == 'explicit-false':
+                            args.append('--supersession=false')
+                        self.boundary_case('-'.join((packing, terms, label, mode)), args + [text], mode)
+        for packing in self.p['policies']:
+            for label, text, mode in (('oversized', oversized, 'default'), ('unpreparable', '!!!', 'explicit-false')):
+                args = ['query', '--packing-policy', packing]
+                if mode == 'explicit-false':
+                    args.append('--supersession=false')
+                self.boundary_case('directory-' + '-'.join((packing, label, mode)),
+                                   args + ['<work>/boundary-docs', text], mode)
+            self.boundary_case('directory-' + packing + '-opted',
+                               ['query', '--packing-policy', packing, '--supersession',
+                                '<work>/boundary-docs', 'oldterm'], 'opted')
+
     def run(self):
         p = self.p
         pred, succ, dup = p['predecessor'], p['successor'], p['duplicate']
@@ -477,6 +528,7 @@ class Session:
                          expected_exit=1, mode='reject')
             self.expect('damaged-store:' + policy + ':no-stdout', '', self.commands[-1]['stdout']['text'])
             self.yes('damaged-store:' + policy + ':integrity', 'integrity' in self.commands[-1]['stderr']['text'])
+        self.boundary()
         if self.replay is not None and self.index != len(self.replay):
             raise ValueError('unexpected extra invocation')
         if len({a['id'] for a in self.assertions}) != len(self.assertions):
@@ -673,7 +725,7 @@ def negative_controls(args):
     actual_false = false_session.assertions[0]
     results.append({'control': 'actual-false-condition', 'assertion': actual_false,
                     'rejected': actual_false['observed'] is False and actual_false['passed'] is False})
-    for kind in ('damaged-input', 'wrong-expectation', 'false-boolean', 'omitted-assertion', 'failed-build', 'damaged-build-stream', 'forbidden-write'):
+    for kind in ('damaged-input', 'wrong-expectation', 'wrong-boundary-expectation', 'false-boolean', 'omitted-assertion', 'failed-build', 'damaged-build-stream', 'forbidden-write'):
         directory = args.output / kind
         shutil.copytree(args.capture, directory)
         if kind == 'damaged-input':
@@ -689,11 +741,14 @@ def negative_controls(args):
             observation = json.loads(observation_path.read_bytes())
             observation['expectations_sha256'] = sha(encoded(expected))
             save(observation_path, observation)
-        elif kind in ('wrong-expectation', 'false-boolean', 'omitted-assertion'):
+        elif kind in ('wrong-expectation', 'wrong-boundary-expectation', 'false-boolean', 'omitted-assertion'):
             path = directory / 'assertions.json'
             assertions = json.loads(path.read_bytes())
             if kind == 'wrong-expectation':
                 assertions[0]['expected'] = 999
+            elif kind == 'wrong-boundary-expectation':
+                assertion = next(a for a in assertions if a['id'].endswith(':store-created') and a['expected'] is True)
+                assertion['expected'] = False
             elif kind == 'omitted-assertion':
                 assertions.pop()
             else:
