@@ -19,6 +19,20 @@ retrieval-quality or authentication result. The earlier
 PR61's previous head `bbf73a91788aac3aeb29ac0e6c74153d32363f14` is retained unchanged as
 that observation; its 44 frozen selection cases are identical to the corrected pin's.
 
+The [MCP query supersession archive](results/2026-10-11-mcp-query-supersession)
+records independent stdio MCP client acceptance of the query opt-in against
+[Mousa PR69](https://github.com/graydeon/mousa/pull/69) public commit
+`7ae0d8768e7cd203c48478412b493e1255c97b11`, tree `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`.
+A standalone standard-library runner speaks newline-delimited JSON-RPC over the real
+stdio lifecycle and observes tool discovery against a pre-query baseline, omitted
+versus explicit `false` equality, true withholding the exact pinned predecessor with
+the declared count under both packing policies, budget and duplicate accounting, no
+history, deactivation, a withdrawn successor, source denial, damaged activation
+events, restart stability, the strict input boundary and the still-filtered
+`mousa_trail` response. That PR is not claimed merged or available on main. It is
+synthetic client-boundary evidence, not semantic, retrieval-quality, performance or
+authentication acceptance, and opted-in trail inspection remains unimplemented.
+
 The prior [administration archive](results/2026-10-07-native-supersession-administration)
 records declaration/activation lifecycle and an unchanged query baseline at its
 own pinned revision. It remains administration-only evidence, not later enforcement.
@@ -66,6 +80,8 @@ record workspace configuration. See that run README's dated correction.
 - [native-supersession-enforcement](native-supersession-enforcement): independent native enforcement runner, frozen inputs and observed packet/trail selections.
 - [results/2026-10-11-native-supersession-enforcement-corrected](results/2026-10-11-native-supersession-enforcement-corrected): paired native acceptance at PR61's corrected public tree, complete bounded captures, the invalid-expression boundary matrix, retained failures and negative controls; no performance claim.
 - [results/2026-10-11-native-supersession-enforcement](results/2026-10-11-native-supersession-enforcement): the earlier pre-correction capture at PR61's previous head, retained unchanged as that observation.
+- [mcp-query-supersession](mcp-query-supersession): independent stdio MCP client runner, frozen protocol, synthetic fixture and pre-query discovery baseline for the query supersession opt-in.
+- [results/2026-10-11-mcp-query-supersession](results/2026-10-11-mcp-query-supersession): stdio MCP client acceptance of the query opt-in at PR69's public tree, with two independent captures, the strict input boundary, restart, damaged-state refusal, forbidden-write and mutated-archive controls; no performance or semantic claim.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.
